@@ -1,0 +1,203 @@
+/* --- IMPORTAÇÃO DE FONTE --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* --- RESET DE ESTILOS GLOBAIS --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(135, 206, 235, 0.6));
+    margin: 0;
+    padding: 0;
+}
+
+/* --- HEADER --- */
+header {
+    background: inherit;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* --- Responsividade para dispositivos móveis --- */
+@media (max-width: 600px) {
+    header {
+        height: 60px; /* Diminui a altura do header */
+        padding: 0 0.5rem; /* Reduz o padding lateral */
+        flex-direction: column; /* Empilha os itens verticalmente */
+        gap: 10px; /* Espaço entre os elementos no header */
+    }
+}
+
+/* --- MAIN CONTEÚDO --- */
+main {
+    margin: 0 1rem 100px;
+}
+
+/* --- NAVEGAÇÃO --- */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Alinha os links no lado direito */
+    align-items: center; /* Alinha verticalmente os links ao centro */
+    height: 80px; /* Define a altura da navegação para igualar ao header */
+    width: 100%; /* Garante que a navegação ocupe toda a largura disponível */
+}
+
+nav a {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #6f6f6f;
+    background-color: #ededed;
+    border: 2px solid #bbbbbb;
+    padding: 10px 15px; /* Ajusta o padding para links mais espaçados */
+    margin: 5px; /* Ajusta a margem para links com mais espaçamento */
+    transition: color 0.3s, background-color 0.3s;
+    display: inline-block; /* Evita que o link ocupe mais espaço do que o necessário */
+    white-space: nowrap; /* Impede a quebra do texto */
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    nav a {
+        font-size: 0.9rem; /* Diminui o tamanho da fonte para telas menores */
+        padding: 8px 12px; /* Ajusta o padding para caber melhor em telas menores */
+        margin: 4px; /* Ajusta a margem para evitar sobrecarga de espaço */
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 0.42rem; /* Reduz o tamanho da fonte em telas pequenas */
+        padding: 6px 10px; /* Reduz o padding para economizar espaço */
+        margin: 3px; /* Ajusta a margem para telas muito pequenas */
+    }
+}
+
+/* --- TÍTULOS --- */
+h1 {
+    background: inherit;
+    color: white;
+    font-size: 2em;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.titulo-article {
+    color: royalblue;
+}
+
+/* --- LINKS --- */
+#link-email {
+    color: blue;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+#link-email:hover {
+    color: #ff4020;
+    text-decoration: underline;
+}
+
+/* --- CAMPOS DE FORMULÁRIO --- */
+#tx-email, #tx-nome, #se-disciplina {
+    padding: 10px;
+    border: 2px solid rgb(16, 2, 29);
+    margin: 10px;
+    border-radius: 8px;
+    background-color: rgb(216, 225, 219);
+    width: 40%;
+    height: auto; /* Ajuste para que o campo tenha altura automática */
+}
+
+/* --- RÓTULOS E FORMULÁRIOS --- */
+#label-geral, #formulario {
+    font-size: 20px;
+    background-color: rgba(0, 52, 196, 0.113);
+}
+
+/* --- BOTÕES --- */
+.botao {
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 8px;
+    width: 300px;
+    height: 80px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: gray;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    text-align: center; /* Alinha o texto ao centro */
+    width: 100%; /* Largura total */
+    position: fixed; /* Fixa o rodapé na parte inferior */
+    bottom: 0; /* Coloca o rodapé no fundo */
+    padding: 10px; /* Aumenta o padding para uma melhor apresentação */
+    background-color: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(46, 115, 143, 0.6));  /* Fundo escuro e translúcido para visibilidade */
+    color: white; /* Cor do texto do rodapé */
+    font-size: 0.9rem; /* Tamanho da fonte ajustado */
+}
+
+/* --- Responsividade para dispositivos móveis --- */
+@media (max-width: 600px) {
+    footer {
+        padding: 10px 5px; /* Ajusta o padding em telas menores */
+        font-size: 0.8rem; /* Ajusta o tamanho da fonte */
+    }
+}
+/* --- ARTIGOS E FORMULÁRIOS --- */
+article, form {
+    background: inherit;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* --- IMAGENS --- */
+#img-empresa {
+    width: 100%;
+    height: auto; /* Ajusta automaticamente a altura conforme a largura */
+    object-fit: cover;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+/* --- Responsividade para dispositivos móveis --- */
+@media (max-width: 600px) {
+    #img-empresa {
+        height: auto; /* Deixa a altura automática para telas pequenas */
+        border-radius: 5px; /* Reduz o arredondamento para telas menores */
+    }
+}
+
+#img-logo {
+    width: 150px;
+    height: auto;
+    animation: zoom 3s infinite ease-in-out;
+    position: absolute; /* Faz a imagem sair do fluxo normal do layout */
+    left: 10px; /* Ajuste para alinhar com a borda esquerda */
+    top: 20px; /* Ajuste para descer mais a logo */
+}
+
+/* --- Responsividade para dispositivos móveis --- */
+@media (max-width: 600px) {
+    #img-logo {
+        width: 100px; /* Reduz o tamanho da logo em telas menores */
+        left: 10px; /* Mantém a logo alinhada à esquerda */
+        top: 11px; /* Ajusta o deslocamento vertical da logo em dispositivos móveis */
+    }
+}
+
+/* --- Animação da logo --- */
+@keyframes zoom {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cursinho Web - Contatos </title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="livros.png">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header> <!--O <header> é uma tag HTML usada para definir o cabeçalho de uma página ou de uma seção específica de um documento -->
+        <img src="logo.png" alt="logo" id="img-logo">
+        <nav>
+            <a href="index.html">Página Inicial</a> 
+            <a href="disciplinas.html">Disciplinas oferecidas</a> 
+            <a href="contatos.html">Entre em contato</a> 
+        </nav>
+    </header>
+    <main>
+        <h1>Dados para contato:</h1>
+        <form method="POST" id="formulario"> 
+            <div>
+                <!-- O atributo for de <label> deve ser igual ao atributo id do elemento relacionado para vinculá-los.
+                Um rótulo também pode ser vinculado a um elemento colocando o elemento dentro do <label>elemento. -->
+                <label for="tx-nome">Nome Completo:</label><br>
+                <input type="text" name="nome" id="tx-nome" required>
+            </div><br>
+            <div>
+                <label>E-mail:</label><br>
+                <input type="email" name="email" id="tx-email" required>
+            </div><br>
+            <div>
+                <label for="se-disciplina">Qual disciplina te interessa mais?</label><br><br>
+                <select name="disciplina" id="se-disciplina" required>
+                    <option>Desenvolvimento web</option>
+                    <option>Programação Orientada a Objetos</option>
+                    <option>Engenharia de Software</option>
+                    <option>Linguagem de Programação</option>
+                    <option>Lógica da Programação</option>
+                </select>
+            </div><br>
+            <fieldset> <!-- A <fieldset> tag é usada para agrupar elementos relacionados em um formulário.-->
+                <legend>Quais linguagens você conhece?</legend>
+                <input type="checkbox" name="linguagens" id="cb-csharp" value="csharp">
+                <label for="cb-csharp">C#</label><br>
+
+                <input type="checkbox" name="linguagens" id="cb-java" value="java">
+                <label for="cb-java">Java</label><br>
+
+                <input type="checkbox" name="linguagens" id="cb-js" value="js">
+                <label for="cb-js">JavaScript</label><br>
+
+                <input type="checkbox" name="linguagens" id="cb-python" value="python">
+                <label for="cb-python">Python</label><br>
+
+                <input type="checkbox" name="linguagens" id="cb-php" value="php">
+                <label for="cb-php">PHP</label><br>
+
+                <input type="checkbox" name="linguagens" id="cb-ruby" value="ruby">
+                <label for="cb-ryby">Ruby</label><br>
+            </fieldset><br>
+            <fieldset>
+                <legend>Onde você conheceu o Cursinho Web?</legend>
+                <input type="radio" name="conheceu" id="ra-amigos" value="amigos" required>
+                <label for="ra-amigos">Amigos</label><br>
+
+                <input type="radio" name="conheceu" id="ra-google" value="google">
+                <label for="ra-google">Google</label><br>
+
+                <input type="radio" name="conheceu" id="ra-youtube" value="youtube">
+                <label for="ra-youtube">Youtube</label><br>
+
+                <input type="radio" name="conheceu" id="ra-instagram" value="instagram">
+                <label for="ra-instagram">Instagram</label><br>
+            </fieldset><br>
+            <div>
+                <button type="submit" class="botao">Enviar</button>
+                <button type="reset" class="botao">Limpar</button>
+            </div>
+            <br><br>
+        </form>
+    </main>
+    <footer>
+        Cursinho Web - Todos os direitos reservados<br>
+        Contato: <a href="mailto:juancarlosferreirachagas@gmail.com" id="link-email">juancarlosferreirachagas@gmail.com</a>
+    </footer>
+</body>
+</html>
